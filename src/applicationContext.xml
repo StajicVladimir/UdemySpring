@@ -7,9 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
+	<context:property-placeholder location="classpath:sport.properties"/>
+	
 	<bean id="myFortuneService"
 		class="com.training.HappyFortuneService">
 	</bean>
+	
 	<bean id="myCoach"
 		class="com.training.TrackCoach">
 		<constructor-arg ref="myFortuneService" />
@@ -18,7 +21,8 @@
 	<bean id="myCricketCoach"
 		class="com.training.CricketCoach">
 		<property name="fortuneService" ref="myFortuneService" />
-		<property name="email" value="dark_side_of_cricket@criketeers.com"/>
-		<property name="team" value="Tatooine Cricketeers"/>
+		<property name="email" value="${foo.email}"/>
+		<property name="team" value="${foo.team}"/>
 	</bean>
+	
 </beans>

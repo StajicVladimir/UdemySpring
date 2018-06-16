@@ -38,6 +38,10 @@ public class CricketCoach implements Coach{
 		this.fortuneService = fortuneService;
 	}
 	
+	public String getRandomFortune() {
+		return fortuneService.getRandomFortune();
+	}
+	
 	@Override
 	public String getDailyWorkout() {
 		return "Cricket Coach says: play some Cricket";

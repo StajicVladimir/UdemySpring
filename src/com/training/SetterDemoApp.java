@@ -17,6 +17,12 @@ public class SetterDemoApp {
 		System.out.println(cricketCoach.getDailyFortune());
 		System.out.println(cricketCoach.getEmail());
 		System.out.println(cricketCoach.getTeam());
+		
+		System.out.println(cricketCoach.getRandomFortune());
+		System.out.println(cricketCoach.getRandomFortune());
+		System.out.println(cricketCoach.getRandomFortune());
+		System.out.println(cricketCoach.getRandomFortune());
+		
 		context.close();
 	}
 
